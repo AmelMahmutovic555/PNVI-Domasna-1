@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvxwweo561dsw"]
+
+[ext_resource type="Script" path="res://button_go_return.gd" id="1_xo53h"]
+
+[sub_resource type="SystemFont" id="SystemFont_acjsw"]
+
+[sub_resource type="SystemFont" id="SystemFont_rha3k"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 3.0
+offset_right = 1008.0
+offset_bottom = 800.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -62.0
+offset_top = 165.0
+offset_right = 1093.0
+offset_bottom = 422.0
+theme_override_colors/font_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
+theme_override_fonts/font = SubResource("SystemFont_acjsw")
+theme_override_font_sizes/font_size = 72
+text = "GAME OVER!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button_go_return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 427.0
+offset_right = 629.0
+offset_bottom = 540.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_rha3k")
+theme_override_font_sizes/font_size = 40
+text = "PLAY AGAIN!"
+script = ExtResource("1_xo53h")
+
+[connection signal="pressed" from="button_go_return" to="button_go_return" method="_on_buttongoreturn_pressed"]

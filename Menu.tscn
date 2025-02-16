@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds4htqxumx8jb"]
+
+[ext_resource type="Script" path="res://button_title_play.gd" id="1_iq5m1"]
+
+[sub_resource type="SystemFont" id="SystemFont_2528e"]
+
+[sub_resource type="SystemFont" id="SystemFont_jlb3e"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1000.0
+offset_bottom = 795.0
+color = Color(0.313431, 0.354197, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -63.0
+offset_top = 207.0
+offset_right = 1093.0
+offset_bottom = 432.0
+theme_override_colors/font_color = Color(2.5028e-06, 0.619271, 0.586482, 1)
+theme_override_colors/font_shadow_color = Color(0.646061, 0.298822, 0.270719, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 13
+theme_override_fonts/font = SubResource("SystemFont_2528e")
+theme_override_font_sizes/font_size = 80
+text = "Simple 3D Game!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button title play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 477.0
+offset_right = 610.0
+offset_bottom = 554.0
+theme_override_colors/font_disabled_color = Color(0.582626, 0.583426, 0.458431, 1)
+theme_override_fonts/font = SubResource("SystemFont_jlb3e")
+theme_override_font_sizes/font_size = 50
+text = "PLAY!"
+script = ExtResource("1_iq5m1")
+
+[connection signal="pressed" from="button title play" to="button title play" method="_on_buttontitleplay_pressed"]
